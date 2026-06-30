@@ -65,9 +65,13 @@
           <i class="fas fa-moon" id="themeIcon"></i>
         </button>
         <!-- [RESUME_LINK] — update resume.pdf with your actual resume file -->
-        <a href="resume.pdf" download class="btn-resume">
+        <a href="resume.pdf" download="Prince-Singh-Resume.pdf" class="btn-resume resume-download-link">
           <i class="fas fa-download"></i>
           <span>Download Resume</span>
+        </a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume btn-view-resume" style="background: rgba(255,255,255,0.1); color: var(--text-primary); box-shadow: none; border: 1px solid var(--border);">
+          <i class="fas fa-eye"></i>
+          <span>View Resume</span>
         </a>
         <div class="hamburger" id="hamburger">
           <span></span><span></span><span></span>
@@ -84,8 +88,11 @@
     <a href="#projects"     onclick="closeMenu()">🚀 Projects</a>
     <a href="#achievements" onclick="closeMenu()">🏆 Achievements</a>
     <a href="#contact"      onclick="closeMenu()">📬 Contact</a>
-    <a href="resume.pdf" download style="margin-top:8px;">
+    <a href="resume.pdf" download="Prince-Singh-Resume.pdf" class="resume-download-link" style="margin-top:8px; display: flex; align-items: center; gap: 8px;">
       <i class="fas fa-download" style="margin-right:8px;color:var(--accent)"></i>Download Resume
+    </a>
+    <a href="resume.pdf" target="_blank" rel="noopener noreferrer" style="margin-top:8px; display: flex; align-items: center; gap: 8px; color: var(--text-primary); border: 1px solid var(--border); padding: 8px 12px; border-radius: 10px;">
+      <i class="fas fa-eye" style="margin-right:8px;color:var(--accent)"></i>View Resume
     </a>
   </div>
 
@@ -182,7 +189,7 @@
             — MongoDB, Express.js, React.js, and Node.js.
           </p>
           <p class="about-bio">
-            I've delivered <span>5+ full-stack projects</span> spanning healthcare platforms, creator
+            I've delivered <span>2+ full-stack projects</span> spanning healthcare platforms, creator
             collaboration tools, and safety applications. I enjoy solving algorithmic problems and have
             cracked <span>300+ problems on LeetCode</span>. When I'm not coding, I'm exploring new
             frameworks, attending coding camps, or contributing to open source.
@@ -205,7 +212,7 @@
           <!-- Quick stats -->
           <div class="about-stats">
             <div class="stat-item">
-              <span class="stat-num">5+</span>
+              <span class="stat-num">2+</span>
               <div class="stat-label">Projects Built</div>
             </div>
             <div class="stat-item">
@@ -330,12 +337,8 @@
             <span class="badge"><i class="fab fa-github" style="margin-right:4px"></i>GitHub</span>
             <span class="badge">VS Code</span>
             <span class="badge">Postman</span>
-            <span class="badge">Redux</span>
             <span class="badge">Angular</span>
-            <span class="badge">Django</span>
-            <span class="badge">Flask</span>
             <span class="badge">FastAPI</span>
-            <span class="badge">Firebase</span>
             <span class="badge">Docker</span>
             <span class="badge">Vercel</span>
           </div>
@@ -411,7 +414,7 @@
                 <i class="fab fa-github"></i> GitHub
               </a>
               <!-- [LIVE_DEMO_2] -->
-              <a href="#" class="btn-sm btn-sm-ghost">
+              <a href="https://pulsecarehms.vercel.app/" target="_blank" class="btn-sm btn-sm-ghost">
                 <i class="fas fa-external-link-alt"></i> Live Demo
               </a>
             </div>
@@ -518,80 +521,6 @@
   </section>
 
   <!-- ====================================================
-       CODING STATS SECTION
-  ==================================================== -->
-  <section id="stats">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-label">// coding activity</span>
-        <h2 class="section-title">LeetCode &amp; GitHub Stats</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="stats-grid">
-
-        <!-- LeetCode card -->
-        <div class="stats-card fade-up">
-          <h3 class="stats-card-title">
-            <i class="fas fa-code"></i> LeetCode Stats
-          </h3>
-          <!-- [LEETCODE_USERNAME] — replace princesingh536 -->
-          <a href="https://leetcode.com/u/princesingh536" target="_blank" class="leetcode-profile-link">
-            <i class="fas fa-external-link-alt"></i> princesingh536
-          </a>
-          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:8px">
-            Total problems solved: <strong style="color:var(--text-primary)">300+</strong>
-          </p>
-          <div class="lc-stats-row">
-            <!-- [EASY_COUNT], [MEDIUM_COUNT], [HARD_COUNT] — update with real counts from LeetCode -->
-            <div class="lc-stat-box easy">
-              <span class="lc-stat-num">120+</span>
-              <div class="lc-stat-label">Easy</div>
-            </div>
-            <div class="lc-stat-box medium">
-              <span class="lc-stat-num">140+</span>
-              <div class="lc-stat-label">Medium</div>
-            </div>
-            <div class="lc-stat-box hard">
-              <span class="lc-stat-num">40+</span>
-              <div class="lc-stat-label">Hard</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- GitHub stats card -->
-        <div class="stats-card fade-up" style="transition-delay:0.1s">
-          <h3 class="stats-card-title">
-            <i class="fab fa-github"></i> GitHub Stats
-          </h3>
-          <!-- [GITHUB_USERNAME] — replace princesinghi7 -->
-          <img
-            class="github-stats-img"
-            src="https://github-readme-stats.vercel.app/api?username=princesinghi7&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6C63FF&icon_color=6C63FF&text_color=c9d1d9"
-            alt="Prince Singh GitHub Stats"
-            loading="lazy"
-          />
-        </div>
-
-        <!-- GitHub streak — full width -->
-        <div class="stats-card full fade-up" style="transition-delay:0.2s">
-          <h3 class="stats-card-title">
-            <i class="fas fa-fire"></i> GitHub Streak
-          </h3>
-          <!-- [GITHUB_USERNAME] — replace princesinghi7 -->
-          <img
-            class="github-stats-img"
-            src="https://github-readme-streak-stats.herokuapp.com/?user=princesinghi7&theme=tokyonight&hide_border=true&background=0d1117&stroke=6C63FF&ring=6C63FF&fire=8E54E9&currStreakLabel=6C63FF"
-            alt="Prince Singh GitHub Streak"
-            loading="lazy"
-          />
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================
        SOCIAL LINKS SECTION
   ==================================================== -->
   <section id="social">
@@ -625,15 +554,6 @@
           </div>
           <div class="social-platform">LeetCode</div>
           <div class="social-username">@princesingh536</div>
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://instagram.com/princesinghofficial7" target="_blank" class="social-card sc-instagram fade-up" style="transition-delay:0.15s">
-          <div class="social-icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">
-            <i class="fab fa-instagram"></i>
-          </div>
-          <div class="social-platform">Instagram</div>
-          <div class="social-username">@princesinghofficial7</div>
         </a>
 
         <!-- Gmail -->
@@ -756,7 +676,6 @@
         <a href="https://github.com/princesinghi7"         target="_blank" class="footer-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/prince-singh536" target="_blank" class="footer-icon-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://leetcode.com/u/princesingh536"    target="_blank" class="footer-icon-btn" title="LeetCode"><i class="fas fa-code"></i></a>
-        <a href="https://instagram.com/princesinghofficial7" target="_blank" class="footer-icon-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="mailto:rajputprincesingh536@gmail.com"     class="footer-icon-btn" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
 

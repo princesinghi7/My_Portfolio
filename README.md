@@ -23,6 +23,8 @@ This repository contains a portfolio website for Prince Singh with a static fron
    > Important: do not commit or deploy the `.env` file. The repo already ignores `.env` via `.gitignore`.
    > Use `backend/.env.example` as the template for local setup only.
 
+   Set `SMTP_HOST`, `SMTP_USER`, and `SMTP_PASS` to valid SMTP credentials before starting the backend.
+
 3. Start the backend server:
    ```bash
    npm start
@@ -71,5 +73,6 @@ To improve search visibility:
 
 ## Notes
 
-- The contact form falls back to `mailto:` if the backend is not available.
-- For a trusted email flow, configure SMTP credentials in `.env`.
+- The contact form falls back to `mailto:` if the backend is not available or if SMTP is not configured.
+- For a trusted email flow, configure SMTP credentials in `backend/.env` and start the backend with `cd backend && npm start`.
+- The resume download is served by the backend at `/api/resume`, so make sure `frontend/resume.pdf` exists or replace it with your own resume.
